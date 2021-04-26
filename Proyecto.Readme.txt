@@ -1,0 +1,169 @@
+
+       
+
+         
+         PROYECTO CHATBOT CINE
+
+         ALUMNO : JUAN JOSÉ PÉREZ CERVERA
+
+
+
+
+
+
+       El proyecto chatbot cine consta de dos versiones, una para terminal y otra web.
+
+       VERSIÓN PARA TERMINAL
+
+       Se adjunta a la presente el main con el código fuente y una carpeta package con  módulos.
+
+       Tanto en el main como en diferentes módulos se importa una libreria de windows para darle voz al chatbot:
+
+       import win32com.client   
+       speaker = win32com.client.Dispatch ("SAPI.SpVoice")
+
+
+
+       El programa posee dos tipos de perfiles, el perfil del propio chatbot y el perfil del usuario.
+
+
+
+       PERFILES:
+
+
+       PERFIL CHATBOT: 
+
+       El chabot cuenta con un modulo emocional, un corpus de empatía, un corpus de memoria y otro de identidad.
+
+
+
+       Modulo emocional.- El modulo emocional consiste en dos diccionarios, uno con palabras positivas
+       y otro con palabras negativas.
+
+       nivel_agrado_ch = {}
+       nivel_desagrado_ch = {}
+
+       Las palabras positivas o negativas se añaden a los diccionarios según la interacción
+       con el usuario. Cada palabra es una clave en el diccionario y tiene un valor de 1.
+
+       En un determinado momento se suman los valores de cada diccionario, y se procede a comparar el resultado.
+       Si los valores del diccionario nivel_agrado_ch  son iguales o superiores a los de nivel_desagrado_ch se
+       se imprime una frase, en caso contrario se imprime otra.
+
+
+       Corpus empatía.- 
+       
+
+       Son dos listas, una sobre empatía y otra de falta de empatía.
+
+       corpus_empatia_ch = []
+       corpus_no_empatia_ch = []
+
+       
+
+       Memoria.- 
+       
+       Lista con frases que se incorporan a la memoria del chatbot.
+
+       memoria_ch = []
+
+       Lista anidada en la pregunta nº6. La lista se encuentra en el módulo ciencia_y_ficcion, y recoge gustos del usuario
+
+       gustos_ficcion =[]
+
+       
+       Identidad.- 
+       
+       Se incorporan datos propios del chatbot como nombre, edad, etc...
+
+       identidad_ch = []
+       
+       nombre,edad,profesion = 'Lussy', 21, 'Asistente virtual'
+
+
+      PERFIL USUARIO:
+
+      El perfil de usuario incorpora un corpus de información.
+
+      Información .-
+
+      Se trata de dos listas con características positivas o negativas del usuario, según las respuesta que éste vaya dando.
+
+      caracteristicas_positivas_u = []
+      caracteristicas_negativas_u = []
+
+
+     PREGUNTA Nº5 :
+
+     Se importa del package el módulo ciencia_ficcion. 
+    
+     El módulo posee una lista llamada gustos_ficcion.
+
+     gustos_ficcion = []
+
+     El módulo posee las siguientes clases:
+
+     Clase Viajes_tiempo:
+
+     En esta clase se añaden peliculas a la lista gustos_ficcion.
+
+     Clase Scfy:
+    
+     Añade películas a la lista gustos_ficcion.
+    
+     Al final del módulo se evalua si la longitud de la lista es igual a 3, si lo es se ejecuta un print, sino se ejecuta otro print diferente.
+
+     
+      PREGUNTA Nº6:
+
+      Se importa el módulo subgenero.Este módulo subgenero posee las siguientes clases:
+
+      Class CiencaFiccion:
+      
+      Posee el atributo nombre y dos diccionarios. 
+
+      diccionario_peliculas = {}
+      
+      diccionario_titulos = {}
+
+      Class PeliculasCiencia :
+
+      Posee el atributo nombre y el atributo puntuación.Posee también un diccionario de titulos.
+
+      diccionario_titulos = {}
+
+      Tiene un método llamado agregar_subgeneros.Este método agrega los subgeneros al diccionario.
+
+      
+      Class Titulos:
+
+      Posee el atributo titulo y un diccionario de títulos.
+
+      Posee un método agregar_titulo.Este método agrega títulos al diccionario.
+
+
+      
+
+       PREGUNTAS Nº 10 A 19 :
+
+      Se usa una clase Chat de la biblioteca NLTK. Se generan pares de preguntas-respuestas.
+
+
+      VERSIÓN PARA WEB
+
+      Se reutiliza parte del código python de la versión para terminal. Esta versión web consta solo de 10 preguntas y posee menos código.
+
+      Se ha usado D`jango para la confección de la web. En el views se recogen las diferentes funciones utilizadas.
+
+      Se han confeccionado los videos a través de la página de synthesia.
+
+
+
+
+
+
+
+
+
+
+

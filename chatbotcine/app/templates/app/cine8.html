@@ -1,0 +1,57 @@
+
+{% load static %} 
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		
+	
+			
+	</head>	
+		
+	<body>
+
+		<h3>CHATBOT CINE</h3>
+		<style>
+		.w3-input{padding:10px;display:block;border:1px solid rgb(221, 145, 145); width:94%; 
+			margin: 1px auto !important;}
+		</style>   
+		<br>
+		<iframe width="1500" height="600"src="{% static 'iframe/tormenta.mp4'%}" frameborder="0"></iframe> 
+		<br>
+
+		<!-- <input type="button" onclick= " location.href= "{% url 'desierto' %}" value="EMPEZAR LA ENTREVISTA" name="boton" /> 
+		<input type="button" onclick= " location.href={% url 'desierto' %}"   value = "LA ENTREVISTA" name="boton" /> -->
+        
+		
+				
+		
+	   
+
+<br>
+	   <a href="{% url 'opcion1' %}">
+	   <input type="button" value="1.- LLEVARÍA A LA ANCIANA A SU CASA" name="boton" /> 
+       </a> 
+	   <a href="{% url 'opcion2' %}">
+	   <input type="button" value="2.- LLEVARÍA A MI MEJOR AMIGO" name="boton" /> 
+       </a> 
+	   <a href="{% url 'opcion3' %}">
+		<input type="button" value="3.- LLEVARÍA AL AMOR DE MI VIDA" name="boton" /> 
+	   </a>
+		<a href="{% url 'opcion4' %}">
+		<input type="button" value="4.- OTRA OPCIÓN" name="boton" /> 
+		</a>
+		
+   
+
+   <div  id="request"></div>
+
+		
+
+
+		
+
+
+
+	</body>
+
+</html>

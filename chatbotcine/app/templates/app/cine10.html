@@ -1,0 +1,123 @@
+
+
+
+
+
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+	
+
+
+
+{% load static %} 
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+	<script src="{% static 'js/script-form-3.js' %}"></script> 
+	<link rel="stylesheet" href="{% static 'js/script-form-3.js' %}">
+	
+
+
+    <title>chatbotcine</title>
+	 
+    
+    <style>
+
+.chatBox{
+	position: relative;
+	margin: 1%;
+	padding: 30px 30px;
+	border: 1px solid #e9979767;
+	border-radius: 1px;
+	max-height: 80vh;
+	min-height: 50vh;
+	background-color: #f1e9e9;
+    
+}
+
+
+.inputum{
+	background-color: #f09393;
+	padding:2%;
+	
+	left: 0;
+	bottom: 0;
+	width: 100%;
+}
+ .request{
+ 	background: #00CC47;
+ 	border: 1px solid #00CC47;
+ 	padding:2%;
+ 	width: 40%;
+ 	color: rgba(80, 21, 21, 0.445);
+ 	border-radius: 20px;
+ 	float: right;
+
+
+ }
+ .btun{
+ 	position: absolute;
+ 	right: 2.5%;
+ 	bottom: 22%;
+ }
+
+
+
+
+
+
+
+
+    </style>
+
+
+
+
+</head>
+
+
+
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+<h4 class="display-4 text-center"> CHATBOT CINE </h4> 
+
+<br>
+<br>
+
+
+<br>
+         <hr>
+
+		 
+
+         <div class="chatBox" id="chatBox">
+
+            <div class="response"> <div id="AutoMessage"><br>RESPUESTA CHATBOT O TAL VEZ HUMANO:  <br><br>
+				 PIENSO QUE ERES UNA PERSONA LEAL, PARA TÍ LA AMISTAD ES MUY IMPORTANTE.
+				<br> 
+				<br>
+				
+				
+				
+
+            
+
+				<br>
+		
+				<br>
+				<br>
+			
+
+            <div  id="request"></div>
+    
+            
+			<a href="{% url 'etica' %}">
+				<input type="button" value="PULSA PARA CONTINUAR" name="boton" /> 
+			</a>           
+              
+         </div
+</div>
+</html>

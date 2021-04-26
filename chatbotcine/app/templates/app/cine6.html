@@ -1,0 +1,51 @@
+
+{% load static %} 
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		
+	
+			
+	</head>	
+		
+	<body>
+
+		<h3>CHATBOT CINE</h3>
+		<style>
+		.w3-input{padding:10px;display:block;border:1px solid rgb(221, 145, 145); width:94%; 
+			margin: 1px auto !important;}
+		</style>   
+		<br>
+		<iframe width="1500" height="500"src="{% static 'iframe/rachel.mp4'%}" frameborder="0"></iframe> 
+		<br>
+
+		<!-- <input type="button" onclick= " location.href= "{% url 'desierto' %}" value="EMPEZAR LA ENTREVISTA" name="boton" /> 
+		<input type="button" onclick= " location.href={% url 'desierto' %}"   value = "LA ENTREVISTA" name="boton" /> -->
+        <strong>  TU RESPUESTA:</strong> <br> 
+		<br> 
+				
+		<form 
+		class = formulario     action="{% url 'rachel2' %}" method="post"  >{% csrf_token %}
+						   <input class="w3-input"  type="text" name="algo" id="mesbox" type="text"  placeholder="Tú: Escribe aquí tu respuesta y pulsa EN ENVIAR">
+	   
+<br>
+<br>
+	   <a href="{% url 'rachel3' %}">
+	   <input type="button" value="ENVIAR" name="boton" /> 
+   
+	   
+
+   
+
+   <div  id="request"></div>
+
+		
+
+
+		
+
+
+
+	</body>
+
+</html>
